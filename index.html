@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Сайт Сони — Gulzada</title>
+  <style>
+    
+    :root{--blue:#e9867e;--soft:#f4f6fb;--card:#ffffff;--muted:#6b7080}
+    *{box-sizing:border-box}
+   body{
+      margin: 0;
+      padding: 0; font-family: sans-serif;background: linear-gradient(135deg, #ff9a9e,#fad0c4);
+    }
+    header{background:var(--blue); color:#fff; padding:28px 16px; text-align:center}
+    header h1{margin:0;font-size:22px}
+    nav{display:flex;justify-content:center;gap:12px; margin-top:8px}
+    nav a{color:rgba(255,255,255,0.95); text-decoration:none; font-weight:600}
+    .container{max-width:1100px;margin:28px auto;padding:0 16px}
+    .card{background:var(--card); padding:20px; border-radius:12px; box-shadow:0 8px 20px rgba(16,24,40,0.06); margin-bottom:20px}
+    h2{color:var(--blue); margin-top:0}
+
+    /* layout grid for main content */
+    .grid{display:grid; grid-template-columns: 1fr 320px; gap:20px}
+    @media(max-width:900px){.grid{grid-template-columns:1fr}}
+
+    /* about */
+    .bio p{line-height:1.55; margin:0}
+
+    /* interests & friends */
+    .list{padding-left:18px}
+
+    /* gallery style */
+    .gallery{display:grid; grid-template-columns:repeat(3,1fr); gap:12px}
+    @media(max-width:800px){.gallery{grid-template-columns:repeat(2,1fr)}}
+    @media(max-width:420px){.gallery{grid-template-columns:1fr}}
+    .gallery img{width:100%; height:200px; object-fit:cover; border-radius:10px; cursor:pointer; box-shadow:0 6px 18px rgba(16,24,40,0.08); transition:transform .18s}
+    .gallery img:hover{transform:scale(1.02)}
+
+    /* sidebar */
+    aside .mini-card{margin-bottom:12px}
+    .small{font-size:14px;color:var(--muted)}
+
+    /* modal for big photo */
+    .modal{position:fixed; inset:0; display:none; align-items:center; justify-content:center; background:rgba(0,0,0,0.6); z-index:60}
+    .modal.open{display:flex}
+    .modal img{max-width:92%; max-height:86%; border-radius:8px}
+    .close-btn{position:absolute; top:20px; right:20px; background:#fff; border-radius:50%; width:36px; height:36px; display:flex; align-items:center; justify-content:center; cursor:pointer; box-shadow:0 6px 20px rgba(0,0,0,0.2)}
+
+    /* footer */
+    footer{padding:18px; text-align:center; color:var(--muted); font-size:14px}
+
+    /* buttons */
+    .btn{display:inline-block;background:var(--blue); color:#fff; padding:10px 14px; border-radius:8px; text-decoration:none}
+
+    /* profile image in header of aside */
+    .avatar{width:100%; height:160px; object-fit:cover;
+       border-radius:8px}
+  
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Сайт Сони — будущей веб-разработчицы</h1>
+    <nav>
+      <a href="#about">Обо мне</a>
+      <a href="#gallery">Фотографии</a>
+      <a href="#friends">Друзья</a>
+      <a href="#contacts">Контакты</a>
+    </nav>
+  </header>
+
+  <div class="container">
+    <div class="grid">
+      <main>
+        <section id="about" class="card bio">
+          <h2>Обо мне</h2>
+          <p>Привет! Меня зовут <strong>Гулзада (Соня) Мне всего лишь 16
+  
+          </strong>Мечтаю стать веб-разработчицей. Я люблю 
+            учиться HTML, CSS и JavaScript, снимать ASMR-видео и делать красивые проекты.
+            На этом сайте я рассказываю о себе,о своих увлечениях,о друзьях и выкладываю свои фотографии.</p>
+          <p style="margin-top:12px;"><strong>Что я люблю:</strong> программировать, смотреть аниме, 
+            слушать музыку, учиться новым навыкам и монтировать видео для YouTube и логотип,банеры.</p>
+        </section>
+
+        <section class="card">
+          <h2>Мои цели</h2>
+          <ul class="list">
+            <li>Стать №1 миллинершой в семье </li>
+            <li>Выучить HTML, CSS и JavaScript</li>
+            <li>Создать своё портфолио</li>
+            <li>Поступить в университет на IT</li>
+            <li>Работать веб-разработчиком в Корее и США</li>
+            <li>Заработать на YouTube, чтобы помочь семье</li>
+            <li>Отправить родителей в Мекку</li>
+            <li>Купить себе м5 машину и квартиру</li>
+            
+          </ul>
+        </section>
+
+        <section id="gallery" class="card">
+          <h2>Мои фотографии</h2>
+          <div class="gallery">
+            <img src="../gulzada.html/WhatsApp Image 2025-11-26 at 22.00.44.jpeg" alt="Фото 1">
+            <img src="../gulzada.html/WhatsApp Image 2025-11-29 at 20.09.45 (1).jpeg" alt="Фото 2">
+            <img src="../gulzada.html/WhatsApp Image 2025-11-29 at 20.09.45.jpeg" alt="Фото 3">
+            <img src="../gulzada.html/WhatsApp Image 2025-11-29 at 20.09.44 (2).jpeg" alt="Фото 4">
+            <img src="../gulzada.html/WhatsApp Image 2025-11-29 at 20.09.44 (3).jpeg" alt="Фото 5">
+            <img src="../gulzada.html/WhatsApp Image 2025-11-29 at 20.09.44.jpeg" alt="Фото 6">
+          </div>
+        </section>
+
+        <section id="friends" class="card">
+          <h2>Мои друзья</h2>
+          <p class="small">Я люблю проводить время с друзьями, смотреть сериалы и вместе учиться. 
+        
+            Вот несколько человек, с кем я общаюсь чаще всего:</p>
+          <ul class="list">
+            <li>Шербол — учимся вместе веб-разработке</li>
+            <li>Камалидин и Жаныш — помогает с видео и монтажом</li>
+            <li>А мои девочки как всегда поддерживают и с ними никогда не скучно </li>
+          </ul>
+        </section>
+
+        <section class="card">
+          <h2>Любимые вещи</h2>
+          <p class="small">Фильмы, музыка, хобби:</p>
+          <ul class="list">
+            <li>Аниме: Solo Leveling, романтика,дорамы</li>
+            <li>Музыка:Only Love Can Hurt like This-Paloma Faith,i'm in love but...(lurics)</li>
+            <li>Хобби: ASMR, создание видео, дизайн,танцы,готовки</li>
+          </ul>
+        </section>
+      </main>
+
+      <aside>
+        <div class="card mini-card">
+          <img src="../gulzada.html/WhatsApp Image 2025-11-29 at 20.09.45.jpeg" alt="Аватар" class="avatar">
+        </div>
+
+        <div class="card mini-card">
+          <h3>Быстрое</h3>
+          <p class="small"><strong>Возраст:</strong> 16–17<br>
+          <strong>Город:</strong> Ош <br>
+          <strong>Курс:</strong>  2 </p>
+        </div>
+
+        <div class="card mini-card">
+          <h3>Навыки</h3>
+          <p class="small">HTML • CSS • Начальный JavaScript • Базовый Git</p>
+          <a class="btn" href="#contacts">Связаться</a>
+        </div>
+
+        <div class="card mini-card">
+          <h3>Статистика</h3>
+          <p class="small">Проекты: 7 • Видео: 18 • Уроки пройдены: 80%</p>
+        </div>
+      </aside>
+    </div>
+
+    <section id="contacts" class="card">
+      <h2>Контакты</h2>
+      <p class="small">Instagram: <strong>@_gwixss__</strong></p>
+      <p class="small">YouTube: <strong>Calm Touch ASMR</strong></p>
+      <p class="small">Email: <em>@boronbaevagulzada7.com</em> </p>
+    </section>
+
+    <footer class="card">
+      <p style="margin:6px 0">Спасибо что посмотрели мой маленький сайт о себе.</p> </footer>
+  </div>
+
+  <!-- modal -->
+  <div class="modal" id="modal">
+    <div class="close-btn" id="closeBtn">✕</div>
+    <img id="modalImg" src="" alt="">
+  </div>
+
+  <script>
+    // Открытие фото в модальном окне
+    document.querySelectorAll('.gallery img').forEach(img=>{
+      img.addEventListener('click', ()=>{
+        const modal=document.getElementById('modal');
+        const modalImg=document.getElementById('modalImg');
+        modalImg.src=img.src;
+        modal.classList.add('open');
+      })
+    })
+    document.getElementById('closeBtn').addEventListener('click', ()=>{
+      document.getElementById('modal').classList.remove('open');
+    })
+    document.getElementById('modal').addEventListener('click', (e)=>{
+      if(e.target.id==='modal') document.getElementById('modal').classList.remove('open');
+    })
+
+    // Плавный скролл для навигации
+    document.querySelectorAll('nav a').forEach(a=>{
+      a.addEventListener('click', e=>{
+        e.preventDefault();
+        const id=a.getAttribute('href');
+        document.querySelector(id).scrollIntoView({behavior:'smooth'});
+      })
+    })
+  </script>
+</body>
+</html>
